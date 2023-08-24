@@ -32,5 +32,6 @@ export class TodosComponent {
     this.todos.push(todo);
     localStorage.setItem("todos", JSON.stringify(this.todos));
   }
+  
 }
 

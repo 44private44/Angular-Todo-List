@@ -1,0 +1,19 @@
+<div class="text-center mb-4 mt-2">
+    <h2>Angular Concept Practices  </h2>
+</div>
+<!-- basic component with *ngif condition  -->
+<div class="container my-5">
+    <h3 class="mb-4">*ngif condition </h3>
+
+    <button class="btn btn-success btn-sm mb-3" (click)="onEditClick()">Make text editable!</button>
+
+    <div *ngIf="canEdit; else noEdit">
+        <p>You can edit the following paragraph.</p>
+    </div>
+
+    <ng-template #noEdit>
+        <p>The following paragraph is read only. Try clicking the button!</p>
+    </ng-template>
+
+    <p [contentEditable]="canEdit">{{ message }}</p>
+</div>
